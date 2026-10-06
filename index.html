@@ -2,25 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QR Code Generator - Create Free QR Codes Online</title>
+    <title>Free QR Code Generator - Create QR Codes Online | QRStudio</title>
 
     <meta
         name="description"
-        content="Create beautiful QR codes instantly with our free online QR Code Generator. Generate QR codes for websites, text, WiFi, WhatsApp and more."
+        content="Create free QR codes online with QRStudio. Generate QR codes for websites, text, WiFi and phone numbers instantly. No sign up required."
     >
 
     <meta
         name="keywords"
-        content="QR code generator, free QR code generator, QR code maker, create QR code, online QR code generator"
+        content="QR code generator, free QR code generator, QR code maker, create QR code, online QR code generator, WiFi QR code, URL QR code"
     >
 
     <meta name="robots" content="index, follow">
-
+    <meta name="googlebot" content="index, follow">
     <meta name="theme-color" content="#080808">
 
+    <!-- Canonical URL -->
+    <link
+        rel="canonical"
+        href="https://qr-code.generatornamechina.com/"
+    >
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta
+        property="og:url"
+        content="https://qr-code.generatornamechina.com/"
+    >
+    <meta
+        property="og:title"
+        content="Free QR Code Generator - QRStudio"
+    >
+    <meta
+        property="og:description"
+        content="Create free QR codes online for websites, text, WiFi and phone numbers. Fast, private and no sign up required."
+    >
+    <meta property="og:site_name" content="QRStudio">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta
+        name="twitter:url"
+        content="https://qr-code.generatornamechina.com/"
+    >
+    <meta
+        name="twitter:title"
+        content="Free QR Code Generator - QRStudio"
+    >
+    <meta
+        name="twitter:description"
+        content="Create free QR codes online for websites, text, WiFi and phone numbers. Fast, private and no sign up required."
+    >
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "QRStudio QR Code Generator",
+        "url": "https://qr-code.generatornamechina.com/",
+        "description": "Free online QR code generator for websites, text, WiFi and phone numbers.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires a modern web browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A QR code is a scannable two-dimensional code that can store information such as website URLs, text, contact details and WiFi information."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this QR Code Generator free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You can create QR codes for free without creating an account."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do QR codes expire?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Static QR codes do not have an expiration date. They continue to work as long as the information they point to remains available."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I create a WiFi QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Select the WiFi option in the generator and enter your network information."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I download my QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. After generating your QR code, you can download it as a PNG image."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <!-- QR Code Library -->
@@ -29,6 +135,7 @@
         defer>
     </script>
 
+    <!-- Main JavaScript -->
     <script src="script.js" defer></script>
 </head>
 
@@ -44,6 +151,7 @@
         <div class="grid"></div>
 
         <div class="particles">
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -142,7 +250,6 @@
 
 
             <!-- Hero QR Preview -->
-
             <div class="hero-preview">
 
                 <div class="preview-glow"></div>
@@ -187,7 +294,6 @@
 
 
         <!-- GENERATOR -->
-
         <section id="generator" class="generator-section">
 
             <div class="section-heading">
@@ -211,7 +317,6 @@
             <div class="generator-card">
 
                 <!-- LEFT -->
-
                 <div class="generator-controls">
 
                     <div class="control-header">
@@ -340,7 +445,9 @@
 
                     <button id="generateBtn" class="generate-button">
 
-                        <span>Generate QR Code</span>
+                        <span>
+                            Generate QR Code
+                        </span>
 
                         <span class="button-arrow">
                             →
@@ -352,7 +459,6 @@
 
 
                 <!-- RIGHT -->
-
                 <div class="qr-result">
 
                     <div class="result-label">
@@ -411,7 +517,6 @@
 
 
         <!-- FEATURES -->
-
         <section id="features" class="features-section">
 
             <div class="section-heading">
@@ -523,7 +628,6 @@
 
 
         <!-- HOW IT WORKS -->
-
         <section id="how-it-works" class="steps-section">
 
             <div class="section-heading">
@@ -614,7 +718,6 @@
 
 
         <!-- FAQ -->
-
         <section id="faq" class="faq-section">
 
             <div class="section-heading">
@@ -735,7 +838,6 @@
 
 
         <!-- FINAL CTA -->
-
         <section class="final-cta">
 
             <div class="cta-glow"></div>
@@ -768,7 +870,6 @@
 
 
     <!-- FOOTER -->
-
     <footer class="footer">
 
         <div class="footer-logo">
