@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator - Create Free QR Codes Online</title>
+
+    <meta
+        name="description"
+        content="Create beautiful QR codes instantly with our free online QR Code Generator. Generate QR codes for websites, text, WiFi, WhatsApp and more."
+    >
+
+    <meta
+        name="keywords"
+        content="QR code generator, free QR code generator, QR code maker, create QR code, online QR code generator"
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#080808">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Code Library -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        defer>
+    </script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+
+        <div class="grid"></div>
+
+        <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-mark">QR</span>
+            <span class="logo-text">QR<span>Studio</span></span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#generator">Generator</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+        <a href="#generator" class="nav-button">
+            Create QR
+        </a>
+
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    FREE • FAST • NO SIGN UP
+                </div>
+
+                <h1>
+                    Create Your
+                    <span>QR Code</span>
+                    Instantly.
+                </h1>
+
+                <p class="hero-description">
+                    Generate beautiful, high-quality QR codes in seconds.
+                    Add your website, text, WiFi, contact information and more.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#generator" class="primary-button">
+                        <span>Create QR Code</span>
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <a href="#how-it-works" class="secondary-button">
+                        How it works
+                    </a>
+
+                </div>
+
+                <div class="trust-row">
+
+                    <div class="trust-item">
+                        <strong>100%</strong>
+                        <span>Free</span>
+                    </div>
+
+                    <div class="trust-line"></div>
+
+                    <div class="trust-item">
+                        <strong>Instant</strong>
+                        <span>Generation</span>
+                    </div>
+
+                    <div class="trust-line"></div>
+
+                    <div class="trust-item">
+                        <strong>No</strong>
+                        <span>Registration</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero QR Preview -->
+
+            <div class="hero-preview">
+
+                <div class="preview-glow"></div>
+
+                <div class="qr-showcase">
+
+                    <div class="showcase-top">
+
+                        <span class="live-indicator">
+                            <span></span>
+                            LIVE PREVIEW
+                        </span>
+
+                        <span class="dots">•••</span>
+
+                    </div>
+
+                    <div class="qr-display">
+
+                        <div id="heroQRCode"></div>
+
+                    </div>
+
+                    <div class="showcase-bottom">
+
+                        <div>
+                            <small>YOUR QR CODE</small>
+                            <strong>Ready to scan</strong>
+                        </div>
+
+                        <div class="scan-icon">
+                            ⌁
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GENERATOR -->
+
+        <section id="generator" class="generator-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    QR GENERATOR
+                </div>
+
+                <h2>
+                    Build your QR code.
+                    <span>Beautifully.</span>
+                </h2>
+
+                <p>
+                    Enter your information and watch your QR code appear instantly.
+                </p>
+
+            </div>
+
+
+            <div class="generator-card">
+
+                <!-- LEFT -->
+
+                <div class="generator-controls">
+
+                    <div class="control-header">
+
+                        <div>
+                            <span class="small-label">STEP 01</span>
+                            <h3>Choose your content</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="type-tabs">
+
+                        <button class="type-tab active" data-type="url">
+                            <span>↗</span>
+                            Website
+                        </button>
+
+                        <button class="type-tab" data-type="text">
+                            <span>T</span>
+                            Text
+                        </button>
+
+                        <button class="type-tab" data-type="wifi">
+                            <span>◉</span>
+                            WiFi
+                        </button>
+
+                        <button class="type-tab" data-type="phone">
+                            <span>☎</span>
+                            Phone
+                        </button>
+
+                    </div>
+
+
+                    <div class="input-area">
+
+                        <label for="qrInput">
+                            Website URL
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">↗</span>
+
+                            <input
+                                type="url"
+                                id="qrInput"
+                                placeholder="https://example.com"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="customization">
+
+                        <div class="customization-header">
+
+                            <span>
+                                Customize
+                            </span>
+
+                            <span class="optional">
+                                OPTIONAL
+                            </span>
+
+                        </div>
+
+
+                        <div class="color-controls">
+
+                            <div class="color-control">
+
+                                <label for="qrColor">
+                                    QR Color
+                                </label>
+
+                                <div class="color-picker">
+
+                                    <input
+                                        type="color"
+                                        id="qrColor"
+                                        value="#111111"
+                                    >
+
+                                    <span id="qrColorValue">
+                                        #111111
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="color-control">
+
+                                <label for="bgColor">
+                                    Background
+                                </label>
+
+                                <div class="color-picker">
+
+                                    <input
+                                        type="color"
+                                        id="bgColor"
+                                        value="#ffffff"
+                                    >
+
+                                    <span id="bgColorValue">
+                                        #FFFFFF
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button id="generateBtn" class="generate-button">
+
+                        <span>Generate QR Code</span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="qr-result">
+
+                    <div class="result-label">
+                        <span></span>
+                        YOUR QR CODE
+                    </div>
+
+                    <div class="qr-result-box">
+
+                        <div
+                            id="qrcode"
+                            class="qr-code-container">
+                        </div>
+
+                        <div
+                            id="qrPlaceholder"
+                            class="qr-placeholder">
+
+                            <div class="placeholder-icon">
+                                QR
+                            </div>
+
+                            <p>
+                                Your QR code will appear here
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-actions">
+
+                        <button
+                            id="downloadBtn"
+                            class="download-button"
+                            disabled>
+
+                            <span>↓</span>
+                            Download PNG
+
+                        </button>
+
+                    </div>
+
+                    <p class="privacy-note">
+                        Your data stays in your browser.
+                        We don't store your information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section id="features" class="features-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    WHY QRSTUDIO
+                </div>
+
+                <h2>
+                    Simple tools.
+                    <span>Premium experience.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-number">
+                        01
+                    </div>
+
+                    <div class="feature-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Instant Generation
+                    </h3>
+
+                    <p>
+                        Create a working QR code instantly without waiting
+                        or creating an account.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-number">
+                        02
+                    </div>
+
+                    <div class="feature-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        High Quality
+                    </h3>
+
+                    <p>
+                        Generate sharp QR codes designed to scan easily
+                        on phones and other devices.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-number">
+                        03
+                    </div>
+
+                    <div class="feature-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Privacy First
+                    </h3>
+
+                    <p>
+                        Your QR data is processed directly in your browser
+                        and isn't uploaded to our servers.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-number">
+                        04
+                    </div>
+
+                    <div class="feature-icon">
+                        ↓
+                    </div>
+
+                    <h3>
+                        Easy Download
+                    </h3>
+
+                    <p>
+                        Download your generated QR code and use it wherever
+                        you need it.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+
+        <section id="how-it-works" class="steps-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    HOW IT WORKS
+                </div>
+
+                <h2>
+                    Four simple steps.
+                </h2>
+
+                <p>
+                    No complicated setup. Just create and download.
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <span class="step-number">
+                        01
+                    </span>
+
+                    <div>
+                        <h3>Enter your content</h3>
+                        <p>
+                            Add a website URL, text, WiFi details or phone number.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span class="step-number">
+                        02
+                    </span>
+
+                    <div>
+                        <h3>Customize</h3>
+                        <p>
+                            Choose the colors that match your brand or style.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span class="step-number">
+                        03
+                    </span>
+
+                    <div>
+                        <h3>Generate</h3>
+                        <p>
+                            Your QR code is generated instantly in your browser.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span class="step-number">
+                        04
+                    </span>
+
+                    <div>
+                        <h3>Download</h3>
+                        <p>
+                            Download your QR code and start using it.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+
+        <section id="faq" class="faq-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    FAQ
+                </div>
+
+                <h2>
+                    Frequently asked
+                    <span>questions.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="faq-list">
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        <span>What is a QR code?</span>
+                        <span class="faq-plus">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            A QR code is a scannable two-dimensional code
+                            that can store information such as website URLs,
+                            text, contact details and WiFi information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        <span>Is this QR Code Generator free?</span>
+                        <span class="faq-plus">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. You can create QR codes for free without
+                            creating an account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        <span>Do QR codes expire?</span>
+                        <span class="faq-plus">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Static QR codes do not have an expiration date.
+                            They continue to work as long as the information
+                            they point to remains available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        <span>Can I create a WiFi QR code?</span>
+                        <span class="faq-plus">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Select the WiFi option in the generator and
+                            enter your network information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        <span>Can I download my QR code?</span>
+                        <span class="faq-plus">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. After generating your QR code, you can
+                            download it as a PNG image.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+
+        <section class="final-cta">
+
+            <div class="cta-glow"></div>
+
+            <div class="cta-content">
+
+                <div class="section-label">
+                    READY?
+                </div>
+
+                <h2>
+                    Create your QR code
+                    <span>in seconds.</span>
+                </h2>
+
+                <p>
+                    Free, fast and beautifully simple.
+                </p>
+
+                <a href="#generator" class="primary-button">
+                    Create QR Code
+                    <span class="arrow">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <span class="logo-mark">QR</span>
+            <span class="logo-text">QR<span>Studio</span></span>
+        </div>
+
+        <p>
+            Free online QR Code Generator.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#generator">Generator</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 QRStudio. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
